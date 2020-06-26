@@ -85,11 +85,6 @@ svg {
     margin-bottom: 0;
 }
 
-#sidebar {
-    grid-area: sidebar;
-    border: yellow 1px solid;
-}
-
 #main-video-info-bottom {
     display: flex;
     justify-content: space-between;
@@ -182,6 +177,10 @@ svg {
     margin-top: 20px;
 }
 
+#comment-form img {
+    border-radius: 50px;
+}
+
 #comment-form input {
     background-color: transparent;
     border: none;
@@ -189,3 +188,54 @@ svg {
     width: 100%;
     margin-left: 20px;
 }
+
+
+#sidebar {
+    grid-area: sidebar;
+    /* border: yellow 1px solid; */
+    color: white;
+    padding: 20px;
+    padding-right: 70px;
+
+}
+
+#up-next {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#up-next > #autoplay {
+    display: flex;
+    align-items: center;
+}
+
+#up-next > #autoplay > span {
+    margin-right: 15px;
+}
+
+#up-next-video {
+    margin-top: 10px;
+    display: flex;
+    border-bottom: solid 1px rgb(83, 83, 83);
+    padding-bottom: 15px;
+}
+
+#up-next-video-desc {
+    font-size: 0.9rem;
+    margin-left: 10px;
+}
+#up-next-video-desc > div {
+    display: flex;
+    flex-direction: column;
+}
+#up-next-video-desc > span {
+    font-weight: 700;
+}
+
+#up-next-video-desc > div > span {
+    color: rgb(161, 160, 160);
+}
+
+#up-next-more{
+    margin-left: auto;
