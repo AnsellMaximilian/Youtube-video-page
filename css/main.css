@@ -2,13 +2,22 @@ body {
     background-color:#191919;
     margin: 0;
     font-family: Roboto, Arial, sans-serif;
+    display: grid;
+    grid-template-areas: 
+    "navbar navbar"
+    "main sidebar"
+    ;
+    grid-template-columns: 1.3fr 1fr;
+    grid-template-rows: auto auto;
 }
 
 nav {
     background-color: #212121;
     display: grid;
     grid-template-columns: 1fr 6fr 1.5fr;
+    grid-area: navbar;
     /* position: fixed; */
+
 }
 
 #search-form {
@@ -52,14 +61,131 @@ nav #right-nav {
     align-items: center;
 }
 
+#right-nav img {
+    border-radius: 50px;
+}
+
 svg {
     width: 24px;
 }
 
 #main {
-    border: white 1px solid;
+    grid-area: main;
+    padding: 20px;
+    padding-left: 50px;
+}
+
+#main #video-info {
+    /* border: 1px white solid; */
+    color: white;
+}
+
+ h1 {
+    font-weight: 500;
+    margin-bottom: 0;
 }
 
 #sidebar {
-    border: white 1px solid;
+    grid-area: sidebar;
+    border: yellow 1px solid;
+}
+
+#main-video-info-bottom {
+    display: flex;
+    justify-content: space-between;
+    font-size: small;
+    line-height: 50px;
+    border-bottom: rgb(66, 65, 65) 1px solid;
+    margin-bottom: 20px
+}
+
+#video-tool-icons {
+    display: flex;
+    align-items: center;
+}
+
+#video-tool-icons > div {
+    /* display: flex; */
+    margin: 0 10px;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    
+ 
+}
+
+#video-tool-icons > div > span {
+    margin: 0 10px;
+    
+}
+
+#video-desc {
+    padding-bottom: 10px;
+    border-bottom: rgb(66, 65, 65) 1px solid;
+
+}
+
+#video-desc #video-channel {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+#video-channel img{
+    border-radius: 50px;
+}
+
+#video-channel > div {
+    display: flex;
+    align-items: center;
+}
+
+#video-channel > div > span {
+    margin-left: 20px;
+}
+
+#video-desc #video-channel button {
+    background-color: rgb(204, 0, 0);
+    border: none;
+    color: white;
+    font-weight: 700;
+    height: 40px;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+#video-desc > p {
+    margin-left: 76px;
+    font-size: medium;
+}
+
+#comments-top {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#comments-top > div {
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+}
+
+#comments-top > div > span {
+    margin-left: 10px;
+}
+
+#comment-form {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+#comment-form input {
+    background-color: transparent;
+    border: none;
+    border-bottom: solid 1px rgb(83, 83, 83);
+    width: 100%;
+    margin-left: 20px;
 }
